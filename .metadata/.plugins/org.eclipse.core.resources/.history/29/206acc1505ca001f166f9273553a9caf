@@ -1,0 +1,17 @@
+package com.project.bl.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.bl.repository.AdminRepository;
+import com.project.bl.responsewrapper.ResponseWrapper;
+
+@Service
+public class AdminService {
+	@Autowired
+	private AdminRepository adminRepository;
+	
+	@Autowired
+	private ResponseWrapper responseWrapper;
+
+}

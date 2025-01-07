@@ -1,0 +1,48 @@
+package com.project.bl.controller;
+
+import com.project.bl.model.Membership;
+import com.project.bl.services.MembershipService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import jakarta.validation.Valid;
+
+@RestController
+@RequestMapping("/api/memberships")
+@CrossOrigin("*")
+public class MembershipController {
+
+    @Autowired
+    private MembershipService membershipService;
+
+    // Create a membership
+    @PostMapping
+    public ResponseEntity<?> createMembership(@RequestBody @Valid Membership membership) {
+        return membershipService.createMembership(membership);
+    }
+
+    // Get all memberships
+    @GetMapping
+    public ResponseEntity<?> getAllMemberships() {
+        return membershipService.getAllMemberships();
+    }
+
+    // Get a membership by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getMembershipById(@PathVariable Integer id) {
+        return membershipService.getMembershipById(id);
+    }
+
+    // Update a membership by ID
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateMembershipById(@PathVariable Integer id, @RequestBody @Valid Membership membership) {
+        return membershipService.updateMembershipById(id, membership);
+    }
+
+    // Delete a membership by ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteMembershipById(@PathVariable Integer id) {
+        return membershipService.deleteMembershipById(id);
+    }
+}

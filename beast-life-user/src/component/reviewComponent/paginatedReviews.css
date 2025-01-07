@@ -1,0 +1,130 @@
+/* Container styling */
+.paginated-reviews-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: black;
+  color: yellow;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title Styling */
+.paginated-reviews-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: yellow;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 2px solid yellow;
+  padding-bottom: 10px;
+}
+
+/* Reviews grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Review card styling */
+.review-card {
+  background-color: #1a1a1a;
+  color: yellow;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Ensures consistent card size */
+}
+
+.review-card p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.review-description {
+  font-size: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.review-member span {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.review-member i {
+  font-style: italic;
+  color: #ffff99;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: black;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.pagination-button:disabled {
+  background-color: grey;
+  color: black;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: yellow;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .paginated-reviews-container {
+    padding: 15px;
+  }
+
+  .paginated-reviews-title {
+    font-size: 1.8rem;
+  }
+
+  .pagination-button {
+    padding: 8px 12px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    height: auto;
+  }
+}

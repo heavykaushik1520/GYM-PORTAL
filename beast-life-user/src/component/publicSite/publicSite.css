@@ -1,0 +1,523 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body spans the entire viewport */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Body Styles */
+.beast-site-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+ 
+}
+
+.beast-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: black;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-top: -65px;
+}
+
+.beast-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beast-navbar-brand img {
+  height: 60px;
+}
+
+.beast-navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: -20px 0px;
+  padding: 10px;
+}
+
+
+.beast-nav-item {
+  position: relative; 
+}
+
+.beast-dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  display: none; 
+  background: black;
+  padding: 10px 0; /* Add some vertical padding */
+  border-radius: 5px;
+  list-style: none;
+  min-width: 150px; /* Ensure dropdown has a consistent width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for better visibility */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Show dropdown on hover */
+.beast-nav-item:hover .beast-dropdown {
+  display: block; /* Show the dropdown */
+}
+
+/* Dropdown Links */
+.beast-dropdown-link {
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 10px 15px; 
+  display: block; 
+  transition: background 0.3s, color 0.3s; 
+}
+
+.beast-dropdown-link:hover {
+  background: #ffd700;
+  color: black;
+}
+
+
+.beast-nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #ffd700;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 40px;
+}
+
+.beast-nav-link:hover {
+  background-color: #e1b800;
+  color: black;
+}
+
+/* Intro Section */
+.beast-intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/public/div1.jpg") no-repeat center center/cover;
+  height: 700px;
+  color: white;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.beast-intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 70%;
+  height: 700px;
+}
+
+.beast-intro-image img {
+  width: 80%;
+  height: 700px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.beast-intro-message {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-left: -400px;
+  margin-top: -100px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInSlideUp 2s ease-out forwards;
+}
+
+.beast-intro-message h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffd700; /* Golden color */
+  margin-bottom: 10px;
+  margin-left: 150px;
+}
+
+.beast-intro-message p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ffd700;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Facilities Section */
+.beast-facilities-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: black;
+}
+
+#facilities-heading {
+  color: #ffd700;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.beast-facility-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Reduced minimum width for narrower cards */
+  gap: 20px;
+  justify-content: center;
+}
+
+.beast-facility-card {
+  background: #ffd700; /* Dark background */
+  color: black;
+  border: 2px solid #ffd700; /* Golden border */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  height: 350px; /* Increased card height */
+}
+
+.beast-facility-card:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.5); /* Golden glow effect */
+}
+
+.beast-facility-card img {
+  width: 100%;
+  height: 200px; /* Increased image height */
+  object-fit: cover; /* Crop image if needed */
+  border-bottom: 2px solid #ffd700; /* Golden divider */
+}
+
+.beast-facility-card h3 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.beast-facility-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #facilities-heading {
+    font-size: 2rem;
+  }
+
+  .beast-facility-card {
+    height: 320px; /* Adjusted height for smaller screens */
+  }
+
+  .beast-facility-card img {
+    height: 180px; /* Adjusted image height */
+  }
+
+  .beast-facility-card h3 {
+    font-size: 1rem;
+  }
+
+  .beast-facility-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* member-section */
+/* Member Section */
+.beast-member-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: black;
+  margin-top: 100px;
+}
+
+.member-heading {
+  color: #ffd700;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.beast-carousel {
+  overflow: hidden; /* Hides overflowing items */
+  width: 100%; /* Full width */
+  position: relative; /* For future arrow/navigation positioning */
+}
+
+.beast-carousel-track {
+  display: flex; /* Align items horizontally */
+  gap: 20px; /* Space between items */
+  transition: transform 0.5s ease; /* Smooth sliding effect */
+  width: 100%;
+}
+
+.beast-carousel-item {
+  flex: 0 0 100%; /* Each item takes 100% of the width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.beast-member-card {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-weight: 600;
+  /* font-size: 2.5rem; */
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  padding: 30px;
+  width: 600px; /* Restrict width */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.beast-member-card h5 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.beast-member-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .beast-member-card {
+    padding: 20px;
+    max-width: 90%; /* Adjust card width for smaller screens */
+  }
+
+  .member-heading {
+    font-size: 2rem;
+  }
+}
+
+/* ------------- */
+/* Facilities Section */
+/* Facilities Section */
+.facilities-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: black;
+}
+
+.facilities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.facilities-heading {
+  font-size: 3rem;
+  color: #ffd700; /* Golden color */
+  margin-bottom: 20px;
+}
+
+.facilities-subheading {
+  font-size: 1.5rem;
+  color: #ffd700; /* Golden color */
+  margin-bottom: 40px;
+}
+
+.facilities-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.facilities-card {
+  background: black;
+  border: 2px solid #ffd700; /* Golden border */
+  border-radius: 10px;
+  width: 350px; /* Increased width */
+  height: 400px; /* Increased height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facilities-card:hover {
+  transform: scale(1.05); /* Slight scaling effect on hover */
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.7); /* Brighter golden glow */
+}
+
+.facilities-card-header img {
+  width: 100%;
+  height: 250px; /* Increased image height */
+  object-fit: contain; /* Ensures the full image is displayed */
+  background: #ffd700; /* Fallback background for images */
+  border-bottom: 2px solid black; /* Golden divider */
+  border-radius: 2px;
+}
+
+.facilities-card-content {
+  padding: 20px;
+}
+
+.facilities-card-content h3,
+.facilities-card-content h4 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .facilities-heading {
+    font-size: 2.5rem;
+  }
+
+  .facilities-subheading {
+    font-size: 1.2rem;
+  }
+
+  .facilities-card {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Flexible height */
+  }
+
+  .facilities-card-header img {
+    height: 200px; /* Adjusted height for smaller screens */
+  }
+
+  .facilities-card-content h3,
+  .facilities-card-content h4 {
+    font-size: 1.2rem; /* Smaller text size */
+  }
+}
+
+/*-----------  */
+
+/* Footer */
+/* Footer Styling */
+.beast-footer {
+  background: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.beast-footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows sections to stack on smaller screens */
+  gap: 20px;
+}
+
+.beast-footer-section {
+  flex: 1 1 200px; /* Make sections responsive */
+  min-width: 200px; /* Minimum width for sections */
+}
+
+.beast-footer-section h3 {
+  color: #ffd700; /* Golden color */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffd700; /* Divider below headings */
+  padding-bottom: 5px;
+}
+
+.beast-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beast-footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.beast-footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.beast-footer-section ul li a:hover {
+  color: #ffd700; /* Golden hover effect */
+}
+
+/* Copyright Section */
+.beast-footer-copyright {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator */
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.beast-footer-copyright a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.beast-footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .beast-footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .beast-footer-section {
+    text-align: center;
+  }
+}

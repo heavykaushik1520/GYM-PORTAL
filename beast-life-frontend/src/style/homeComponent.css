@@ -1,0 +1,100 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #efc807;
+    /* background-image: url(""); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.app-container {
+    overflow-y: scroll;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #060500;
+}
+
+.header-title {
+    color: #FFD700;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-button, .dropdown-button {
+    padding: 10px 15px;
+    background-color: #FFD700;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #060500;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #FFD700;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.welcome-section, .about-section, .membership-section, .reviews-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #060500;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    color: #FFD700;
+}
+
+.footer {
+    background-color: #060500;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

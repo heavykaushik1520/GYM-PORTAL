@@ -1,0 +1,90 @@
+/* Container for the trainers section */
+.trainers-container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: black;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the trainers section */
+.trainers-header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Loading message styling */
+.loading-message {
+  color: #555;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Table styling */
+.trainers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: black;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styling */
+.table-header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table row styling */
+.table-row:nth-child(even) {
+  background-color: #291d1d;
+}
+
+.table-row:hover {
+  background-color: #000000;
+}
+
+/* Table data cell styling */
+.table-data {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #f5f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .trainers-container {
+    padding: 10px;
+  }
+
+  .trainers-header {
+    font-size: 20px;
+  }
+
+  .table-header,
+  .table-data {
+    font-size: 12px;
+  }
+}
