@@ -1,5 +1,0 @@
-package com.project.bl.repository;
-
-public interface AdminRepository {
-
-}
