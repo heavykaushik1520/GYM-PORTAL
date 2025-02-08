@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./getByIdMember.css"
+import "./getByIdMember.css";
 
 export default function MemberDashboard2() {
   const { id } = useParams(); // Member ID from the route
@@ -40,14 +40,26 @@ export default function MemberDashboard2() {
     <div className="member-dashboard-container">
       <h1>Welcome, {member.name}!</h1>
       <div className="member-details">
-        <p><strong>Id :</strong>{member.id}</p>
-        <p><strong>Email:</strong> {member.email}</p>
-        <p><strong>Address:</strong> {member.address}</p>
-        <p><strong>Age:</strong> {member.age}</p>
-        <p><strong>Weight:</strong> {member.weight} kg</p>
-        <p><strong>Password :</strong>{member.password}</p>
-        
-        
+        <p>
+          <strong>Id :</strong>
+          {member.id}
+        </p>
+        <p>
+          <strong>Email:</strong> {member.email}
+        </p>
+        <p>
+          <strong>Address:</strong> {member.address}
+        </p>
+        <p>
+          <strong>Age:</strong> {member.age}
+        </p>
+        <p>
+          <strong>Weight:</strong> {member.weight} kg
+        </p>
+        <p>
+          <strong>Password :</strong>
+          {member.password}
+        </p>
       </div>
     </div>
   );

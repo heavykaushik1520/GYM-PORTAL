@@ -1905,3 +1905,13 @@
 2025-01-28 17:46:39,178 [Worker-11: Decoration Calculation] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\rushi', return code '1', error message '<3>WSL (10) ERROR: CreateProcessEntryCommon:502: execvpe /bin/bash failed 2
 <3>WSL (10) ERROR: CreateProcessEntryCommon:505: Create process not expected to return
 '
+2025-02-07 22:30:40,262 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-02-07 22:30:47,168 [Worker-5: Decoration Calculation] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\rushi', return code '1', error message '<3>WSL (10) ERROR: CreateProcessEntryCommon:502: execvpe /bin/bash failed 2
+<3>WSL (10) ERROR: CreateProcessEntryCommon:505: Create process not expected to return
+'
+2025-02-07 22:31:05,685 [Worker-3: Launching beast-life - BeastLifeApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-07 22:31:05,716 [Worker-3: Launching beast-life - BeastLifeApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-07 22:31:05,723 [Worker-3: Launching beast-life - BeastLifeApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\IT VEDANT\GYM-MANAGEMENT-SYSTEM\beast-life\src\test\resources
+2025-02-07 22:31:11,004 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-07 22:31:11,052 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-07 22:31:11,060 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\IT VEDANT\GYM-MANAGEMENT-SYSTEM\Diamond\src\test\resources

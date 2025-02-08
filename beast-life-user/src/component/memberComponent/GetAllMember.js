@@ -22,6 +22,7 @@ export default function AllMembers() {
   }, [isDeleted]);
 
   
+  // eslint-disable-next-line no-unused-vars
   const deleteMember = async (id) => {
     try {
       const response = await fetch(`http://localhost:8080/api/members/${id}`, {
